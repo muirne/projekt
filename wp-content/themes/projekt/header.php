@@ -2,91 +2,104 @@
  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
     <?php wp_head(); ?>
  </head>
  <body>
+     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+     <div class="rounded-social-buttons">
+                    <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
 
 
-  <div id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+     <!-- Full Page Image Background Carousel Header -->
+      <div id="myCarousel" class="carousel slide">
+            <!-- Wrapper for Slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <!-- Set the first background image using inline CSS below. -->
+                    <div class="fill" style="background-image:url('http://localhost/WP_projekt/wp-content/uploads/2018/06/bright-close-up-color-221247.jpg');" ></div>
+                    <div class="carousel-caption">
+                         <h1 class="animated fadeInLeft"></h1>
+                         <p class="animated fadeInUp"></p>
 
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('https://localhost/WP_projekt/wp-content/uploads/2018/06/ball.jpeg');"></div>
-                <div class="carousel-caption">
-                     <h2 class="animated fadeInLeft">GET FIT</h2>
-                     <p class="animated fadeInUp">by Kamila Ociepka</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <!-- Set the second background image using inline CSS below. -->
+                    <div class="fill" ></div>
+                    <div class="carousel-caption">
+                         <h1 class="animated fadeInDown"></h1>
+                         <p class="animated fadeInUp"></p>
 
+                    </div>
+                </div>
+                <div class="item">
+                    <!-- Set the third background image using inline CSS below. -->
+                    <div class="fill"></div>
+                    <div class="carousel-caption">
+                         <h1 class="animated fadeInRight" style="font-size: px" > FITNESS</h1>
+                         <h1 class="animated fadeInRight">GET FIT</h1>
+                         <p class="animated fadeInRight">---- by Kamila Ociepka ----</p>
+
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('https://localhost/WP_projekt/wp-content/uploads/2018/06/ball.jpeg');"></div>
-                <div class="carousel-caption">
-                     <h2 class="animated fadeInDown">GET FIT</h2>
-                     <p class="animated fadeInUp">by Kamila Ociepka</p>
 
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('https://localhost/WP_projekt/wp-content/uploads/2018/06/ball.jpeg');"></div>
-                <div class="carousel-caption">
-                     <h2 class="animated fadeInRight">GET FIT</h2>
-                     <p class="animated fadeInRight">by Kamila Ociepka</p>
-                     
-                </div>
-            </div>
+
+
         </div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
+<div id="navi" class="container-fluid">
+    <nav class="nav hidden-sm-down" style="display: flex; justify-content: flex-end; text-align:right; background-color: #2B77C4;">
+
+
+                <a class="responsive"><span></span></a>
+                        <?php wp_nav_menu(
+                         array(
+                          'menu'=>'kamila',
+                          'theme_location' => 'top',
+                          'container' => 'nav',
+                          'container_class' => false,
+                          'menu_class' => 'nav',
+                          'menu_id' => 'top-menu' ,
+                          )
+                      ); ?>
 
     </div>
+    </nav>
+    <nav class="navbar hidden-md-up">
+        <div id="guzik" class="container-fluid">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar2"> ☰ </button>
 
-     <!-- <div class="container-fluid main">
-         <div class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="img-fluid" src="https://localhost/WP_projekt/wp-content/uploads/2018/06/ball.jpeg" alt="Pierwszy slajd">
-            </div>
-            <div class="carousel-item">
-              <img class="img-fluid" src="https://localhost/WP_projekt/wp-content/uploads/2018/06/ball.jpeg" alt="Drugi slajd">
-            </div>
-            <div class="carousel-item">
-              <img class="img-fluid" src="https://localhost/WP_projekt/wp-content/uploads/2018/06/ball.jpeg" alt="Trzeci slajd">
-            </div>
-          </div>
-         </div>
-      </div> -->
 
-   <div class="container">
-      <div class="navigation">
-         <a class="responsive"><span></span></a>
-                 <?php wp_nav_menu(
-                  array(
-                   'menu'=>'kamila',
-                   'theme_location' => 'top',
-                   'container' => 'nav',
-                   'container_class' => false,
-                   'menu_class' => 'nav',
-                   'menu_id' => 'top-menu' ,
-                   ) ); ?>
-              <div class="clear"></div>
-           </div>
-          </div>
+
+            <div class="collapse navbar-toggleable-sm" id="collapsingNavbar2">
+
+                <a class="responsive"><span></span></a>
+                        <?php wp_nav_menu(
+                         array(
+                          'menu'=>'kamila',
+                          'theme_location' => 'top',
+                          'container' => 'nav',
+                          'container_class' => false,
+                          'menu_class' => 'nav',
+                          'menu_id' => 'top-menu' ,
+
+                          )
+                      ); ?>
+            </div>
+        </div>
+    </nav>
+
+
 
 
     </header>
