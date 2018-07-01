@@ -22,11 +22,13 @@
 /** The name of the database for WordPress */
 define('DB_NAME', 'projekt');
 
+//die($_SERVER['SERVER_NAME']);
+
 /** MySQL database username */
 define('DB_USER', 'root');
 
 /** MySQL database password */
-if($_SERVER['SERVER_NAME'] === '167.99.240.250') { define('DB_PASSWORD', 'bubi20'); } else { define('DB_PASSWORD', 'coderslab'); }
+if(strpos($_SERVER['SERVER_NAME'], '_') !== false) { define('DB_PASSWORD', 'bubi20'); } else { define('DB_PASSWORD', 'coderslab'); }
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
