@@ -26,7 +26,7 @@ define('DB_NAME', 'projekt');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'bubi20');
+if($_SERVER['SERVER_NAME'] === '167.99.240.250') { define('DB_PASSWORD', 'bubi20'); } else { define('DB_PASSWORD', 'coderslab'); }
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
