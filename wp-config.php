@@ -26,7 +26,7 @@ define('DB_NAME', 'projekt');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'coderslab');
+define('DB_PASSWORD', 'bubi20');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
