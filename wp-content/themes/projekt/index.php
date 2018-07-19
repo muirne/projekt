@@ -13,7 +13,7 @@
         ?>
      <div class="row">
       <?php if ( $q2->have_posts() ) : while ( $q2->have_posts() ) :    $q2->the_post(); ?>
-        <div class="col-xs-12 col-sm-6 col-md-8">
+        <div id="main" class="col-xs-12 col-sm-6 col-md-8">
          <div class="card">
 
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

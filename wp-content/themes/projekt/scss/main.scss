@@ -8,23 +8,6 @@ $media-breakpoints: (
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
-// Small devices (landscape phones, 576px and up)
-// @include media-breakpoint-up(sm) {
-//  }
-//
-// // Medium devices (tablets, 768px and up)
-// @include media-breakpoint-up(md) {  }
-//
-// // Large devices (desktops, 992px and up)
-// @include media-breakpoint-up(lg) { }
-//
-// // Extra large devices (large desktops, 1200px and up)
-// @include media-breakpoint-up(xl) {}
-//
-@media (max-width: 575px) {}
-@media (min-width: 768px) {}
-@media (min-width: 992px) {}
-@media (min-width: 1200px) {}
 
 * {
     box-sizing: border-box;
@@ -45,15 +28,19 @@ section {
     margin: 0;
     padding: 0;
 }
-
+body {
+  padding: 20px;
+  background-color:white;
+  font-family: "Roboto", sans-serif;
+}
 .container-fluid {
-    padding: 10px;
+    padding: 0;
     margin: 0;
     text-align: center;
 }
 
 .row {
-    padding: 10px;
+    padding: 0;
     margin: 0;
     text-align: center;
 }
@@ -88,28 +75,8 @@ h1 {
     -o-background-size: cover;
     opacity: 0.6;
 }
-/**
-     * Button
-     */
-.btn-transparent {
-    background: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-}
 
-.btn-transparent:hover {
-    background-color: #fff;
-}
-
-.btn-rounded {
-    border-radius: 70px;
-}
-
-.btn-large {
-    padding: 11px 45px;
-    font-size: 18px;
-}
-/**
+ /**
      * Change animation duration
      */
 .animated {
@@ -147,20 +114,51 @@ h1 {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
 }
-//menus
 
-.navbar {
-    font-size: 1rem;
+
+//elementy glownego menu
+.nav li a {
+background:#0c9ba0;
+color:#FFF;
+display:block;
+padding-top:1em;
+padding-top:1em;
+margin-right:0.5em;
+border-radius: 7%;
+letter-spacing: 0.3em;
+font-weight: bolder;
 }
-//sekcja glowny post
+
+.nav li a:hover {
+background:green;
+text-decoration: none;
+color: white;
+}
+
+/* sub-menus */
+.sub-menu{
+display:none;
+}
+li:hover > ul{
+ visibility:visible; /* show it on hover */
+ opacity:1;
+ transition-delay:0;
+ display: block;
+}
+
+//section main post
+ #main{
+    border: 1em solid #0c9ba0;
+    border-radius: 2%;
+    padding-top: 10px;
+    }
+
 .carousel-inner img {
     height: 55em;
 }
-
 .card-text {
     color: black;
 }
-
 h5 {
     padding: 3%;
     color: white;
@@ -188,7 +186,7 @@ p {
 .pic_2 img {
     width: 100%;
     height: 100%;
-    margin-top: 10px;
+    margin-top: 2px;
 }
 
 .pink_2 a {
@@ -201,7 +199,14 @@ h3 {
     font-weight: 600;
     text-transform: uppercase;
 }
-//sekcja siedbar
+
+#main .card{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+//section siedbar
 
 #side {
     background-image: url("http://localhost/WP_projekt/wp-content/uploads/2018/06/received_2639556182726692-450x1024.jpeg");
@@ -210,12 +215,12 @@ h3 {
     padding-top: 5px;
     background-color: #2B77C4;
     border: solid 3px #742974;
+    border-radius: 2%;
     color: white;
     display: flex;
     flex-direction: column;
-    //justify-content: space-between;
     min-height: 100%;
-}
+    }
 
 #card_s {
     margin-top: auto;
@@ -233,12 +238,7 @@ h3 {
     font-size: 20em;
     color: #742974;
 }
-// .container_sidebar{
-//     background: url('http://localhost/WP_projekt/wp-content/uploads/2018/06/thumbnail_102.jpg') center center no-repeat;
-//     background-size: cover;
-// }
-//sidebar karuzela
-
+//social buttons
 .rounded-social-buttons {
     text-align: right !important;
     height: 50px;
@@ -333,8 +333,7 @@ h3 {
     background: #fefefe;
     border-color: #125688;
 }
-//posty
-
+//post
 #title {
     text-align: center;
     background-color: transparent;
@@ -379,8 +378,10 @@ h2 {
 }
 
 #bod {
-    background-color: #2B77C4;
+    background-color: #0c9ba0;
 }
+
+
 //roznowy przycisk
 .btn-primary {
     overflow: hidden;
@@ -437,7 +438,7 @@ footer p {
     height: 100%;
     padding: 0;
 }
-//page-fitness
+//page-grafik
 .tabletit {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 2em;
@@ -528,17 +529,21 @@ tr {
 }
 //single
 //posty
+#bod_sin{
+    margin-left: 200px;
+    margin-right: 200px;
 
+}
 #title_3 {
     text-align: center;
-    background-color: #3F7FBF;
+    background-color: #0c9ba0;
     display: table-cell;
     vertical-align: middle
 }
 
 div .card-text_3 {
     color: white;
-    background-color:#3F7FBF;
+    background-color:#0c9ba0;
     text-align: center;
     display: table-cell;
     padding-top: 2px !important;
@@ -618,4 +623,131 @@ display: table;
 .table-responsive{
     font-size: 12px !important;
 }
+}
+
+//kids
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+
+p {
+  text-align: justify;
+}
+.card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-right: 2px;
+}
+.cardbody {
+  font-size: 95%;
+  padding: 10px;
+}
+.card-title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.jumbotron {
+  height: 300px;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(222, 222, 222, 1) 0%,
+    rgba(255, 255, 255, 1) 99%,
+    rgba(128, 128, 128, 1) 100%
+  );
+}
+#jumboBtn {
+  margin-top: 25px;
+}
+.jumbotron h1 {
+  font-size: 3.2em;
+}
+p.lead {
+  font-size: 1em;
+  color: #880B43;
+  justify-content: center;
+}
+
+.ti_kids{
+   color: #880B43;
+   justify-content: center;
+}
+h5 {
+  text-transform: uppercase;
+}
+
+@media (max-width: 770px) {
+  .jumbotron h1 {
+    font-size: 2em;
+  }
+
+  p.lead {
+    font-size: 1em;
+  }
+}
+//oferta
+.card-container {
+  perspective: 1000px;
+  margin: 15px;
+}
+
+.card-three {
+
+  min-height: 300px;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+/*   margin: 15px; */
+}
+
+.content,
+.card-section {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.thumbnail {
+  height: 75px;
+  width: 75px;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+.card-three {
+  border: 1px solid #33cc00;
+}
+
+.card-three h1 {
+  color: #33cc00;
+}
+
+.t-three {
+  border: none;
+  background: linear-gradient(to bottom, #99ff33, #33cc00);
+}
+
+.card-container:hover .card-three {
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  transition: 1s;
+  transform: rotateY(0deg);
+  position: relative;
+  animation: turn-three 1s linear;
+}
+
+@keyframes turn-three {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
 }

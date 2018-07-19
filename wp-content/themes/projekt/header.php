@@ -57,8 +57,8 @@
 
         </div>
 
-<div id="navi" class="container-fluid">
-    <nav class="nav hidden-sm-down" style="display: flex; justify-content: flex-end; text-align:right; background-color: #2B77C4;">
+<div id="menu" class="container-fluid">
+    <nav class="nav hidden-sm-down" style="display: flex; justify-content: flex-end; text-align:right;">
 
 
                 <a class="responsive"><span></span></a>
