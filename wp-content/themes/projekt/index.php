@@ -24,21 +24,21 @@
            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           </ol>
           <!-- Wrapper for slides -->
-         <div class="carousel-inner">
+         <div id="cal" class="carousel-inner">
           <div class="carousel-item active">
-           <img class="d-block"    src="http://localhost/WP_projekt/wp-content/uploads/2018/06/pexels-photo-396133.jpeg" data-color="lightblue" alt="First Image">
+           <img class="d-block"    src="http://localhost/WP_projekt/wp-content/uploads/2018/08/exercise-exercise-ball-fitness-41213-768x512.jpg" data-color="lightblue" alt="First Image">
           <div class="carousel-caption d-md-block">
 
           </div>
          </div>
          <div class="carousel-item">
-          <img class="d-block " src="http://localhost/WP_projekt/wp-content/uploads/2018/06/pexels-photo-1172019-1000x800.jpeg" data-color="firebrick" alt="Second Image">
+          <img class="d-block " src="http://localhost/WP_projekt/wp-content/uploads/2018/08/beach-blond-hair-exercising-1300526-768x512.jpg" data-color="firebrick" alt="Second Image">
          <div class="carousel-caption d-md-block">
 
           </div>
          </div>
          <div class="carousel-item">
-          <img class="d-block" src="http://localhost/WP_projekt/wp-content/uploads/2018/06/pexels-photo-374694.jpeg" data-color="violet" alt="Third Image">
+          <img class="d-block" src="http://localhost/WP_projekt/wp-content/uploads/2018/08/active-eyes-face-458645-768x512.jpg" data-color="violet" alt="Third Image">
         <div class="carousel-caption d-md-block">
 
         </div>

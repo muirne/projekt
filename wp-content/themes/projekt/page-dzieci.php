@@ -11,62 +11,37 @@
 </div>
 
 </section>
-<div class="row">
-<div class="col-xs-12 col-sm-6 col-md-3">
-  <div class="card">
-     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <div class="card-title"> <?php the_title(); ?></div>
-    <hr>
-    <p class="cardbody"><?php the_content(); ?></p>
-<?php endwhile; ?>
-    <!-- post navigation -->
-<?php else: ?>
-    <!-- no posts found -->
-<?php endif; ?>
-  </div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-3">
-  <div class="card">
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <div class="card-title"> <?php the_title(); ?></div>
-    <hr>
-    <p class="cardbody"><?php the_content(); ?></p>
-<?php endwhile; ?>
-    <!-- post navigation -->
-<?php else: ?>
-    <!-- no posts found -->
-<?php endif; ?>
-  </div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-3" id="bottom">
-  <div class="card card">
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <div class="card-title"> <?php the_title(); ?> </div>
-    <hr>
-    <p class="cardbody"><?php the_content(); ?></p>
-<?php endwhile; ?>
-    <!-- post navigation -->
-<?php else: ?>
-    <!-- no posts found -->
-<?php endif; ?>
-  </div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-3">
-  <div class="card">
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <div class="card-title"><?php the_title(); ?></div>
-    <hr>
-    <p class="cardbody"><?php the_content(); ?></p>
-<?php endwhile; ?>
-    <!-- post navigation -->
-<?php else: ?>
-    <!-- no posts found -->
-<?php endif; ?>
-  </div>
-</div>
-</div>
 
-</div>
+<div class="container-fluid">
+             <?php
+               $qd = new WP_Query([
+                                 'post_type' => 'post',
+                                 'posts_per_page' => 4,
+                                 'category_name' => 'dzieciaki'
+
+                         ]);
+             ?>
+   <div class="row row-flex">
+       <?php if ( $qd->have_posts() ) : while ( $qd->have_posts() ) :    $qd->the_post(); ?>
+                            <!-- post -->
+
+          <div class="col-md-3 col-sm-6 col-xs-12 d-flex align-items-stretch">
+             <div id="bod" class="card card-body flex-fill">                    <div class="card-block">
+                      <h2 id="title" class="card-title"><?php the_title(); ?></h2>
+                      <div class="card-text"><?php the_content(); ?></div>
+                  </div>
+              </div>
+          </div>
+
+                          <?php endwhile; ?>
+              <!-- post navigation -->
+                         <?php else: ?>
+              <!-- no posts found -->
+                        <?php endif; ?>
+
+        </div>
+  </div>
+
 
 
 

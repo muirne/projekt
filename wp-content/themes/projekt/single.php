@@ -5,20 +5,28 @@
 
                <div class="row row-flex">
                    <?php if ( have_posts() ) : while ( have_posts() ) :    the_post(); ?>
-                                        <!-- post -->
-
-
-                         <div id="bod_sin" class="card card-body flex-fill">
-                          <div class="card-img-top img-responsive"><?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?></div>
-
-
-                               <div class="card-block">
-                                  <h2 id="title_3" class="card-title"><?php the_title(); ?></h2>
-                                  <div class="card-text_3"><?php the_content(); ?></div>
-                                 </div>
+                        <!-- post -->
+                        <section>
+                        <div class="container py-3">
+                        <div class="cardy">
+                          <div class="row ">
+                            <div class="col-md-4">
+                                <div class="card-img-top img-responsive"><?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?></div>
                               </div>
+                              <div class="col-md-8 px-3">
+                                <div class="card-block px-3">
+                                    <div id="title_3" class="card-title_single"><?php the_title(); ?></div>
+                                    <div class="card-text_single"><?php the_content(); ?></div>
+
+                                </div>
+                              </div>
+
+                            </div>
                           </div>
-                      </div>
+                        </div>
+                        </div>
+                        </section>
+
 
                                       <?php endwhile; ?>
                           <!-- post navigation -->
@@ -28,5 +36,6 @@
 
                     </div>
               </div>
+
 
           <?php get_footer(); ?>

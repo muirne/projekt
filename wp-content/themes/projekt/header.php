@@ -23,9 +23,9 @@
       <div id="myCarousel" class="carousel slide">
             <!-- Wrapper for Slides -->
             <div class="carousel-inner">
-                <div class="item active">
+                <div class="item active" style="background-color:black">
                     <!-- Set the first background image using inline CSS below. -->
-                    <div class="fill" style="background-image:url('http://localhost/WP_projekt/wp-content/uploads/2018/06/bright-close-up-color-221247.jpg');" ></div>
+                    <div id="one" class="fill" style="background-image:url('http://localhost/WP_projekt/wp-content/uploads/2018/06/bright-close-up-color-221247.jpg');" ></div>
                     <div class="carousel-caption">
                          <h1 class="animated fadeInLeft"></h1>
                          <p class="animated fadeInUp"></p>

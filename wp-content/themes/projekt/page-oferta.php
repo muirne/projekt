@@ -2,56 +2,46 @@
 get_header(); ?>
 
 
-
-
-
-
-
     <div class="container-fluid">
 
 
-  <section id="wellcome" class="jumbotron  jumbotron-fluid">
+  <section class="oferta jumbotron  jumbotron-fluid">
     <div class="container">
 
-      <h1>THE BOOKSHELF</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+      <h1>Znajdź coś dla siebie.</h1>
+      <p class="lead">Fitness "GET FIT" to niepowtarzalne miejsce w samym Centrum Limanowej. Zapraszamy do zapoznania się z naszą ofertą. Stawiamy na propagowanie zdrowego, sportowego stylu życia. Różnorodność zajęć pozwala na dostosowanie intensywności ćwiczeń do Państwa możliwości. Zapraszamy na trening!</p>
 
     </div>
 
   </section>
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="card">
-        <div class="card-title"> What people read</div>
-        <hr>
-        <p class="cardbody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat quis libero id accumsan. Duis in nibh quis lorem elementum interdum sed nec eros. Nulla consequat, ex vitae faucibus dignissim, mauris arcu aliquam lorem, eget fringilla
-          ipsum nisi vitae augue.</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="card">
-        <div class="card-title"> Favorite Quotes</div>
-        <hr>
-        <p class="cardbody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat quis libero id accumsan. Duis in nibh quis lorem elementum interdum sed nec eros. Nulla consequat, ex vitae faucibus dignissim, mauris arcu aliquam lorem, eget fringilla
-          ipsum nisi vitae augue.</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3" id="bottom">
-      <div class="card card">
-        <div class="card-title"> Bookstores </div>
-        <hr>
-        <p class="cardbody"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat quis libero id accumsan. Duis in nibh quis lorem elementum interdum sed nec eros. Nulla consequat, ex vitae faucibus dignissim, mauris arcu aliquam lorem, eget fringillaipsum nisi vitae augue.</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="card">
-        <div class="card-title">Our Partners</div>
-        <hr>
-        <p class="cardbody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat quis libero id accumsan. Duis in nibh quis lorem elementum interdum sed nec eros. Nulla consequat, ex vitae faucibus dignissim, mauris arcu aliquam lorem, eget fringilla
-          ipsum nisi vitae augue.</p>
-      </div>
-    </div>
-  </div>
 
-  </div>
+  <div class="container-fluid">
+               <?php
+                 $qof = new WP_Query([
+                                   'post_type' => 'post',
+                                   'posts_per_page' => 8,
+                                   'category_name' => 'oferta'
+
+                           ]);
+               ?>
+     <div class="row row-flex">
+         <?php if ( $qof->have_posts() ) : while ( $qof->have_posts() ) :    $qof->the_post(); ?>
+                              <!-- post -->
+
+            <div class="col-md-3 col-sm-6 col-xs-12 d-flex align-items-stretch">
+               <div id="bod" class="card card-body flex-fill">                    <div class="card-block">
+                        <h2 id="title" class="card-title"><?php the_title(); ?></h2>
+                        <div class="card-text"><?php the_content(); ?></div>
+                    </div>
+                </div>
+            </div>
+
+                            <?php endwhile; ?>
+                <!-- post navigation -->
+                           <?php else: ?>
+                <!-- no posts found -->
+                          <?php endif; ?>
+
+          </div>
+    </div>
 <?php get_footer(); ?>

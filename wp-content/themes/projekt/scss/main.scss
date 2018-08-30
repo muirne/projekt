@@ -5,9 +5,17 @@ $media-breakpoints: (
     lg: 992px,
     xl: 1200px
 );
+
+$fiolet:#742974;
+$fiolet-trzcionka:#880B43;
+$szary:#736e75;
+$blekit:#9aebed;
+$fiolet_2:#3e0f2d;
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
 * {
     box-sizing: border-box;
@@ -30,7 +38,6 @@ section {
 }
 body {
   padding: 20px;
-  background-color:white;
   font-family: "Roboto", sans-serif;
 }
 .container-fluid {
@@ -44,6 +51,13 @@ body {
     margin: 0;
     text-align: center;
 }
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+
 //strona tytulowa
 .active,
 .carousel,
@@ -53,8 +67,9 @@ body {
 
 .carousel-inner {
     height: 100%;
-    background: #000;
-}
+
+    }
+
 
 .carousel-caption {
     padding-bottom: 80px;
@@ -113,24 +128,25 @@ h1 {
 .fadeInRight {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
+    text-align: center;
 }
 
 
 //elementy glownego menu
 .nav li a {
-background:#0c9ba0;
-color:#FFF;
+background:$szary;
+color:white;
 display:block;
-padding-top:1em;
-padding-top:1em;
-margin-right:0.5em;
-border-radius: 7%;
-letter-spacing: 0.3em;
+padding-top:0.5em;
+margin-right:0.1em;
+border-radius: 5%;
+letter-spacing: 0.4em;
 font-weight: bolder;
+font-size: 1em;
 }
 
 .nav li a:hover {
-background:green;
+background:$fiolet;
 text-decoration: none;
 color: white;
 }
@@ -148,39 +164,39 @@ li:hover > ul{
 
 //section main post
  #main{
-    border: 1em solid #0c9ba0;
     border-radius: 2%;
-    padding-top: 10px;
+    padding-top: 0;
     }
 
+.carousel-inner{
+    height:100%;
+    width:100%;
+}
+
 .carousel-inner img {
-    height: 55em;
+ text-align: center;
+}
+.card-body{
+    padding: 0;
 }
 .card-text {
-    color: black;
+    color: #742974;
 }
+
 h5 {
     padding: 3%;
-    color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+    color: #742974;
+    }
 
 p {
     text-align: center;
-    padding: 3%;
-}
-
-.card-title {
-    background-color: #cc00cc;
-    color: white;
 }
 
 .pic_2 {
     width: 100%;
     height: 70%;
     text-align: center;
-    padding-bottom: 5px;
+    //padding-bottom: 5px;
 }
 
 .pic_2 img {
@@ -363,7 +379,7 @@ h2 {
     clear: both;
     text-align: center;
     justify-content: center;
-    padding: 5px;
+    padding-top: 10px;
 }
 
 .card-block {
@@ -378,7 +394,7 @@ h2 {
 }
 
 #bod {
-    background-color: #0c9ba0;
+    background-color: $szary;
 }
 
 
@@ -528,34 +544,36 @@ tr {
 
 }
 //single
-//posty
-#bod_sin{
-    margin-left: 200px;
-    margin-right: 200px;
-
-}
-#title_3 {
+.card-title_single {
     text-align: center;
-    background-color: #0c9ba0;
     display: table-cell;
-    vertical-align: middle
+    vertical-align: middle;
+    margin: 0.5em;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.card-text_3{
+    color: #e2b6d2;
 }
 
 div .card-text_3 {
     color: white;
-    background-color:#0c9ba0;
     text-align: center;
     display: table-cell;
-    padding-top: 2px !important;
+    }
+
+.cardy{
+    background: linear-gradient(to left, #292427 0%, #cc6699 112%);
+    color:white;
+    border-radius: 3%;
+    
+    font-family: 'Varela Round', sans-serif;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    text-align: left;
 }
 
-h2 {
-    font-size: 1.5em;
-    font-weight: 600;
-    text-transform: uppercase;
-    color:white;
-    background-color: #3F7FBF;
-}
 
 .img-responive {
     max-width: 100%;
@@ -576,7 +594,6 @@ h2 {
 .card-block {
     display: flex;
     flex-direction: column;
-    //justify-content: space-between;
     min-height: 60%;
 }
 
@@ -628,10 +645,6 @@ display: table;
 //kids
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-
-p {
-  text-align: justify;
-}
 .card {
   background-color: white;
   border-radius: 5px;
@@ -647,29 +660,33 @@ p {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 1.2em;
-}
+ }
 
 .jumbotron {
   height: 300px;
   border-radius: 10px;
+  background-image: url('http://localhost/WP_projekt/wp-content/uploads/2018/08/assortment-bright-candy-1043519.jpg');
+  background-repeat:repeat;
+  background-size:contain;
 
-  background: linear-gradient(
-    180deg,
-    rgba(222, 222, 222, 1) 0%,
-    rgba(255, 255, 255, 1) 99%,
-    rgba(128, 128, 128, 1) 100%
-  );
+
 }
 #jumboBtn {
-  margin-top: 25px;
+  margin-top: 10px;
 }
 .jumbotron h1 {
-  font-size: 3.2em;
+  font-size: 2em;
+  font-weight: bold;
 }
 p.lead {
   font-size: 1em;
   color: #880B43;
+  display: flex;
   justify-content: center;
+  padding-left: 2.5em;
+   font-weight: bold;
+   width: 90%;
+
 }
 
 .ti_kids{
@@ -690,64 +707,8 @@ h5 {
   }
 }
 //oferta
-.card-container {
-  perspective: 1000px;
-  margin: 15px;
-}
-
-.card-three {
-
-  min-height: 300px;
-  height: 100%;
-  border: 1px solid black;
-  border-radius: 5px;
-  text-align: center;
-/*   margin: 15px; */
-}
-
-.content,
-.card-section {
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.thumbnail {
-  height: 75px;
-  width: 75px;
-  border: 1px solid black;
-  border-radius: 50px;
-  margin-top: 10px;
-}
-.card-three {
-  border: 1px solid #33cc00;
-}
-
-.card-three h1 {
-  color: #33cc00;
-}
-
-.t-three {
-  border: none;
-  background: linear-gradient(to bottom, #99ff33, #33cc00);
-}
-
-.card-container:hover .card-three {
-  transform-style: preserve-3d;
-  transform-origin: 50% 50%;
-  transition: 1s;
-  transform: rotateY(0deg);
-  position: relative;
-  animation: turn-three 1s linear;
-}
-
-@keyframes turn-three {
-  0% {
-    transform: rotateY(0deg);
-  }
-
-  100% {
-    transform: rotateY(360deg);
-  }
+.oferta{
+    background-image: url('http://localhost/WP_projekt/wp-content/uploads/2018/08/pexels-photo-669578-2.jpeg');
+    background-repeat:repeat;
+    background-size:cover;
 }

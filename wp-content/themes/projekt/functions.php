@@ -1,5 +1,5 @@
 <?php
-
+require 'post-types/omnie.php';
 
 
 add_theme_support('menus');
