@@ -12,6 +12,15 @@ $szary:#736e75;
 $blekit:#9aebed;
 $fiolet_2:#3e0f2d;
 
+@import url('bootstrap/css/bootstrap.css');
+@import url('bootstrap/css/bootstrap-responsive.css');
+body {
+     padding-top: 60px;
+     padding-bottom: 40px;
+}
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
@@ -67,9 +76,7 @@ h2 {
 
 .carousel-inner {
     height: 100%;
-
     }
-
 
 .carousel-caption {
     padding-bottom: 80px;
@@ -223,13 +230,13 @@ h3 {
 }
 
 //section siedbar
-
 #side {
     background-image: url("http://localhost/WP_projekt/wp-content/uploads/2018/06/received_2639556182726692-450x1024.jpeg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     padding-top: 5px;
-    background-color: #2B77C4;
+    background-color: $szary;
     border: solid 3px #742974;
     border-radius: 2%;
     color: white;
@@ -567,7 +574,7 @@ div .card-text_3 {
     background: linear-gradient(to left, #292427 0%, #cc6699 112%);
     color:white;
     border-radius: 3%;
-    
+
     font-family: 'Varela Round', sans-serif;
     letter-spacing: 0.2em;
     font-weight: bold;
@@ -606,33 +613,6 @@ width:1200px;
 display: table;
 
 }
-//mediaqueries
-@media (min-width: 992px) {
-    #guzik{
-        display: none;
-    }
-}
-@media (min-width: 768px) {
-    #guzik{
-        display: none;
-    }
-
-}
-@media (min-width: 1200px) {
-    #guzik{
-        display: none;
-    }
-}
-@media (max-width: 575px) {
- #navi{
-        display: none;
-    }
- #content{
-    margin: 0;
-    padding: 0;
-    width: 411px;
-
-}
 .content_2{
     width: 411px;
 
@@ -640,7 +620,7 @@ display: table;
 .table-responsive{
     font-size: 12px !important;
 }
-}
+
 
 //kids
 @import url("https://fonts.googleapis.com/css?family=Roboto");
@@ -668,12 +648,8 @@ display: table;
   background-image: url('http://localhost/WP_projekt/wp-content/uploads/2018/08/assortment-bright-candy-1043519.jpg');
   background-repeat:repeat;
   background-size:contain;
-
-
 }
-#jumboBtn {
-  margin-top: 10px;
-}
+
 .jumbotron h1 {
   font-size: 2em;
   font-weight: bold;
@@ -684,7 +660,7 @@ p.lead {
   display: flex;
   justify-content: center;
   padding-left: 2.5em;
-   font-weight: bold;
+  font-weight: bold;
    width: 90%;
 
 }
@@ -697,18 +673,87 @@ h5 {
   text-transform: uppercase;
 }
 
-@media (max-width: 770px) {
-  .jumbotron h1 {
-    font-size: 2em;
-  }
 
-  p.lead {
-    font-size: 1em;
-  }
-}
 //oferta
-.oferta{
+#oferta{
     background-image: url('http://localhost/WP_projekt/wp-content/uploads/2018/08/pexels-photo-669578-2.jpeg');
     background-repeat:repeat;
     background-size:cover;
+    }
+
+//dokumenty
+.guzik{
+text-transform: uppercase;
+font-size: 1.2em;
+font-family: 'Varela Round', sans-serif;
+margin: 2em;
+}
+.tit_doc{
+    margin: 2em;
+}
+.guzik_doc{
+margin: 1em;
+padding-bottom: 2em;
+color: $fiolet-trzcionka;
+text-align: left;
+}
+
+//mediaqueries
+@media (min-width: 992px) {
+    #guzik{
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    #guzik{
+        display: none;
+    }
+
+}
+@media (min-width: 1200px) {
+    #guzik{
+        display: none;
+    }
+}
+@media (max-width: 575px) {
+#menu{
+    display: none;
+}
+.collapse{
+        display: inline;
+        height:100px;
+        width: 100%;
+   }
+}
+
+
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 2em;
+  }
+  .jumberton{
+    height: 500px;
+  }
+  p.lead {
+    font-size: 0.9em;
+  }
+  .navbar-toggler-icon {
+      background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=BFE100');
+  }
+  .navbar-brand{
+      background-color: $fiolet_2;
+  }
+  #navbarSupportedContent15{
+      color: $fiolet;
+      background: $szary;
+  }
+ a .responsive{
+      height: 100%;
+      width: 100%;
+  }
+  span{
+      height: 100%;
+      width:100%;
+  }
+
 }

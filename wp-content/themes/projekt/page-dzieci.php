@@ -26,7 +26,9 @@
                             <!-- post -->
 
           <div class="col-md-3 col-sm-6 col-xs-12 d-flex align-items-stretch">
-             <div id="bod" class="card card-body flex-fill">                    <div class="card-block">
+             <div id="bod" class="card card-body flex-fill">
+                 <div class="card-block">
+                     <div class="card-img-top img-responsive"><?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?></div>
                       <h2 id="title" class="card-title"><?php the_title(); ?></h2>
                       <div class="card-text"><?php the_content(); ?></div>
                   </div>

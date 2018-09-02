@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <div class="wrapper">
- <div id="content">
   <div class="container-fluid">
 
     <?php
@@ -11,7 +10,7 @@
 
                         ]);
         ?>
-     <div class="row">
+     <div class="row row-flex">
       <?php if ( $q2->have_posts() ) : while ( $q2->have_posts() ) :    $q2->the_post(); ?>
         <div id="main" class="col-xs-12 col-sm-6 col-md-8">
          <div class="card">

@@ -10,15 +10,16 @@ $qdok = new WP_Query([
 
         ]);
  ?>
-<div class="new">
+<div class="guzik">
     <?php if ( $qdok->have_posts() ) : while ( $qdok->have_posts() ) :    $qdok->the_post(); ?>
           <!-- post -->
 
-       <div class="tit">
+       <div class="tit_doc">
            <h3><?php the_title(); ?></h3>
+           <a class="guzik_doc" href="<?php the_permalink(); ?>"class="btn btn-primary">Pobierz</a>
        </div>
 
-        <a  href="<?php the_permalink(); ?>"class="btn btn-primary">Pobierz</a>
+
 
 
 

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="wrapper">
- <div id="content">
-            <div class="container-fluid">
+
+            <div id="content" class="container-fluid">
 
                <div class="row row-flex">
                    <?php if ( have_posts() ) : while ( have_posts() ) :    the_post(); ?>

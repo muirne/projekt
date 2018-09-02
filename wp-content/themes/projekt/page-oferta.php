@@ -1,20 +1,15 @@
 <?php
 get_header(); ?>
 
-
     <div class="container-fluid">
+      <section id="oferta" class="jumbotron  jumbotron-fluid">
+       <div class="container-fluid">
 
-
-  <section class="oferta jumbotron  jumbotron-fluid">
-    <div class="container">
-
-      <h1>Znajdź coś dla siebie.</h1>
-      <p class="lead">Fitness "GET FIT" to niepowtarzalne miejsce w samym Centrum Limanowej. Zapraszamy do zapoznania się z naszą ofertą. Stawiamy na propagowanie zdrowego, sportowego stylu życia. Różnorodność zajęć pozwala na dostosowanie intensywności ćwiczeń do Państwa możliwości. Zapraszamy na trening!</p>
-
+         <h1>Znajdź coś dla siebie.</h1>
+           <p class="lead">Fitness "GET FIT" to niepowtarzalne miejsce w samym Centrum Limanowej. Zapraszamy do zapoznania się z naszą ofertą. Stawiamy na propagowanie zdrowego, sportowego stylu życia. Różnorodność zajęć pozwala na dostosowanie intensywności ćwiczeń do Państwa możliwości. Zapraszamy na trening!</p>
+      </div>
+     </section>
     </div>
-
-  </section>
-
   <div class="container-fluid">
                <?php
                  $qof = new WP_Query([
@@ -29,7 +24,9 @@ get_header(); ?>
                               <!-- post -->
 
             <div class="col-md-3 col-sm-6 col-xs-12 d-flex align-items-stretch">
-               <div id="bod" class="card card-body flex-fill">                    <div class="card-block">
+               <div id="bod" class="card card-body flex-fill">
+                   <div class="card-block">
+                       <div class="card-img-top img-responsive"><?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?></div>
                         <h2 id="title" class="card-title"><?php the_title(); ?></h2>
                         <div class="card-text"><?php the_content(); ?></div>
                     </div>

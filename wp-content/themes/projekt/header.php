@@ -11,7 +11,7 @@
      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
      <div class="rounded-social-buttons">
-                    <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-button facebook" href="https://www.facebook.com/fitnessGetFITlimanowa/?fb_dtsg_ag=AdzdL2Me3mEUvbvBPkiHKhM3TRlOTGoHlE60GXMMZ62KMg%3AAdxyLm9HE9KgrSNRntTYBDRCLN24e-hIIdIEEJwZw_B1ew" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -52,15 +52,10 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
 <div id="menu" class="container-fluid">
     <nav class="nav hidden-sm-down" style="display: flex; justify-content: flex-end; text-align:right;">
-
-
                 <a class="responsive"><span></span></a>
                         <?php wp_nav_menu(
                          array(
@@ -75,13 +70,22 @@
 
     </div>
     </nav>
-    <nav class="navbar hidden-md-up">
+    <!-- <nav class="navbar hidden-md-up">
         <div id="guzik" class="container-fluid">
-            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar2"> ☰ </button>
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" > ☰ </button>
 
+            <div class="collapse navbar-toggleable-sm"> -->
+            <nav class="navbar hidden-md-up">
 
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#"></a>
 
-            <div class="collapse navbar-toggleable-sm" id="collapsingNavbar2">
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15"
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-toggleable-sm" id="navbarSupportedContent15">
 
                 <a class="responsive"><span></span></a>
                         <?php wp_nav_menu(
@@ -96,7 +100,7 @@
                           )
                       ); ?>
             </div>
-        </div>
+        
     </nav>
 
 

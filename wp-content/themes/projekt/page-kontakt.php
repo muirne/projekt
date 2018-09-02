@@ -63,7 +63,7 @@ get_header(); ?>
 </div>
 
 <div class="embed-responsive-item">
-        <iframe src="https://www.google.com/maps/place/Marka+22,+34-600+Limanowa/@49.70508,20.4167159,17z/data=!3m1!4b1!4m5!3m4!1s0x47161cdbaca68853:0xba83404443bd7d9d!8m2!3d49.7050766!4d20.4189099" width="580" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/place/Marka,+34-600+Limanowa/@49.7007726,20.4113564,17z/data=!3m1!4b1!4m5!3m4!1s0x47161cd04c0cdd47:0xa1ceff869ddcd8db!8m2!3d49.7007726!4d20.4135451" width="580" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
 
 
